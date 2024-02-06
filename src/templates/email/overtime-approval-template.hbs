@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Approval Overtime</title>
+    </head>
+    <body>
+        <p>{{to}} wrote:</p>
+        <br />
+        <p>Dear Mr/Ms {{froms}}</p>
+        <p>Please be advised for the Overtime the team members will render as
+            below:</p>
+        <p>Project Name:<strong>{{projectName}}</strong></p>
+        <p>Hours Per Day:<strong>{{hours}}</strong></p>
+        <p>Period:<strong>
+                From
+                {{fromDate}}
+                To
+                {{toDate}}
+                ({{totalDate}}
+                days)</strong></p>
+        <p>Schedule:<strong>{{schedule}}</strong> </p>
+        <p>Additional Information:<strong> {{notes}}.</strong>
+        </p>
+        <p>List of Personnel:</p>
+        <ul>
+            {{#each personnel}}
+                <li><strong>{{this}}</strong></li>
+            {{/each}}
+        </ul>
+        <p>Looking forward to your approval. Thank you.</p>
+        <p>Sincerely,</p>
+        <p>{{to}}</p>
+        <p>-------------</p>
+        <br />
+        <p>Dear Mr/Ms {{to}},</p>
+        <p><strong>This is {{approvalStatus}}.</strong></p>
+        <br />
+        <p>
+            Dear HR & Admin, please note this has been
+            {{approvalStatusLowercase}}.
+        </p>
+        <br />
+        <p>Sincerely,</p>
+        <p>{{from}}</p>
+    </body>
+</html>
